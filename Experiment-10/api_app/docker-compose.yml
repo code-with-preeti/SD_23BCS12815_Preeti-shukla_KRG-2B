@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: api-sentinel-postgres
+    environment:
+      POSTGRES_USER: api_sentinel
+      POSTGRES_PASSWORD: api_sentinel
+      POSTGRES_DB: api_sentinel
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: api-sentinel-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  pg_data:
+  redis_data:
+
