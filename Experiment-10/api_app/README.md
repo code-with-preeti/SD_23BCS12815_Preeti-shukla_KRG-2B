@@ -1,6 +1,5 @@
-# API Sentinel (Phase 2)
+# API Sentinel 
 
-Interview-ready API monitoring project with:
 
 - Postman-style monitor creation (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)
 - Redis + BullMQ queue architecture
